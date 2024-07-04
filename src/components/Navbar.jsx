@@ -5,6 +5,7 @@ import {useEffect} from 'react';
 import axios from 'axios';
 import {useState} from 'react';
 function Navbar(){
+	const [isActive, setIsActive] = useState(false);
 	const [checkAuthen, setCheckAuthen]=useState(false);
 	const { loginWithRedirect , logout, user, isAuthenticated, isLoading } = useAuth0();
 	// const { logout } = useAuth0();
@@ -47,14 +48,24 @@ function Navbar(){
 		li Link{
 			text-decoration: none;
 		}
+
+		.bar{
+			display: none;
+		}
+
+		.cross{
+			display: none;
+		}
 	`
 	return(
 		<>
-			<Div>
-				<div className="logo">
+			<Div className={isActive ? "shortNavbar" :"Navbar"}>
+				<li onClick={()=> setIsActive(true)} className="bar"><i class="fa-solid fa-bars"></i></li>
+				<li onClick={()=> setIsActive(false)} className="cross"><i class="fa-solid fa-xmark"></i></li>
+				<div className={isActive ? "shortlogo" : "logo"}>
 					<img src='../public/hamro-ramro.png' alt="not found" />
 				</div>
-				<div className="menu">
+				<div className={isActive ? "shortmenu" : "menu"}>
 					<ul>
 						<li><Link to='/'>Home</Link></li>
 						{isAuthenticated && <li><Link to='/products'>Products</Link></li>}

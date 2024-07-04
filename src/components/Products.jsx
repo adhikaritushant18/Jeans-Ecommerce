@@ -30,7 +30,7 @@ function Products(){
 
 		<div>
 
-			<Imgs>
+			<Imgs className="Products">
 				{
 					products.map((ele, index)=>{
 						return <Link to={`/products/${ele.id}`}><div className="content" style={{'color': '#ead2f7'}}>

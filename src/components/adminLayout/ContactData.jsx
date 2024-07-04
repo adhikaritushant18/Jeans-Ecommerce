@@ -33,7 +33,7 @@ function ContactData(){
 	return(
 		<>
 			<div>
-			<TABLE>
+			<TABLE className="tabledata">
 			<table>
 			<thead>
 				<tr>

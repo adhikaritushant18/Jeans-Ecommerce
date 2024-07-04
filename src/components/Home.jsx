@@ -4,9 +4,6 @@ import {myContext} from './MainContext'
 import {useContext} from 'react'
 import {Link} from 'react-router-dom'
 function Home(){
-	// const {name}=useContext(myContext);
-	// console.log(name);
-
 	const {products}=useContext(myContext);
 	console.log(products);
 	const Div=styled.div`
@@ -59,7 +56,7 @@ function Home(){
 	`
 	return(
 		<>
-			<Div>
+			<Div className="body_content">
 			<h1>{name}</h1>
 				<div className="home-content">
 					<h1>Welcome to Hamro-Ramro Jeans Sales Market</h1>
@@ -73,7 +70,7 @@ function Home(){
 				</div>
 			</Div>
 
-			<Imgs>
+			<Imgs className="HomePro">
 				{
 					products.map((ele, index)=>{
 						return <Link to={`/products/${ele.id}`}><div className="content" key={index} style={{'color': '#ead2f7'}}>

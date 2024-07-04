@@ -19,7 +19,7 @@ function AdminPanel(){
 	`
 	return(
 		<>
-		<div style={{'height': '90vh', 'background': '#2d302e', 'display': 'flex', 'gap': '3rem'}}>
+		<div style={{'height': '90vh', 'background': '#2d302e', 'display': 'flex', 'gap': '3rem'}} className="adminpanel">
 		<UL>
 			<li><Link to="/admin/users" style={{'fontSize': '2rem', 'color': '#9e1c34'}}>users</Link></li>
 			<li><Link to="/admin/contact" style={{'fontSize': '2rem', 'color': '#9e1c34'}}>contact</Link></li>

@@ -11,6 +11,7 @@ import AdminPanel from './components/adminLayout/AdminPanel'
 import ContactData from './components/adminLayout/ContactData'
 import UserData from './components/adminLayout/UserData'
 import Bottom from './components/Bottom'
+import {GlobalStyle} from '../GlobalStyle.module'
 import './Global.css'
 
 
@@ -18,6 +19,7 @@ import './Global.css'
 function App(){
   return(
     <>
+    <GlobalStyle />
     {/*<style />*/}
     <Navbar />
     <Routes>
